@@ -6,7 +6,7 @@
 - [From calm to energetic](https://drive.google.com/open?id=1xfWM_TCvr-pKqm_2jiJts2Z_vfpH2x9V)
 - [original calm](https://drive.google.com/open?id=1821AQCPJfhuOlfsazsP0DHRPqTo6QAs1)
 - [From calm to energetic](https://drive.google.com/open?id=1tsjyclXgcoy1KiMORHUgz8zBHtyZ45VI)
-## SÜNTEESITUD REKLAAM
+## Synthesized advertisement
 - [Original Tõnu HTS](https://drive.google.com/open?id=1rsOws_mvI-ey6VA2nP31wiEZDYTr8J2l)
 - [Energetic Tõnu HTS](https://drive.google.com/open?id=1ayj01dsSt8hlZKPReuFyTxhilOPvvJO8)
 - [Calm Tõnu HTS](https://drive.google.com/open?id=1JkwqkGlJ9h6mVoXp3rAVYSz15EtTsaM4)
@@ -15,15 +15,11 @@
 - [Calm 2 Tõnu HTS](https://drive.google.com/open?id=1q99midd7Mies3wa5qvU9kSP8jIAwcIMb)
 - [Original Meelis HTS](https://drive.google.com/open?id=18rPXONwxgsJYNJXFmtqCSth2QpHsmhU0)
 - [Energetic Meelis HTS](https://drive.google.com/open?id=1Br9-VObcfcKyuT3CifyY4SPsSARH6bH6)
-Rahulik Meelis HTS:
-https://drive.google.com/open?id=1gqMR9niZCkLsAETVSCs6cVRpK45NUPxc
-Originaal 2 Meelis HTS:
-https://drive.google.com/open?id=15BAQQY7eaO6PYkDTNNPf-IdethEEVBoy
-Energiline 2 Meelis HTS:
-https://drive.google.com/open?id=1IIziwL94RbtPPLatjpruMRAFZfaw1z_5
-Rahulik 2 Meelis HTS:
-https://drive.google.com/open?id=1cnRObf-Rhw7pSZk3FJ6jYGLvYdG14AkL
-250. EPOHH MEES- JA NAISTEGELASED
+- [Calm Meelis HTS](https://drive.google.com/open?id=1gqMR9niZCkLsAETVSCs6cVRpK45NUPxc)
+- [Original 2 Meelis HTS](https://drive.google.com/open?id=15BAQQY7eaO6PYkDTNNPf-IdethEEVBoy)
+- [Energetic 2 Meelis HTS](https://drive.google.com/open?id=1IIziwL94RbtPPLatjpruMRAFZfaw1z_5)
+- [Calm 2 Meelis HTS](https://drive.google.com/open?id=1cnRObf-Rhw7pSZk3FJ6jYGLvYdG14AkL)
+##Audiobook MEES- JA NAISTEGELASED (250. EPOCH)
 Originaal meestegelane:
 https://drive.google.com/open?id=1QAgZduetnVLLAOR7V0XR5Z7Ny7scBF0n
 Meestegelasest naistegelaseks:
