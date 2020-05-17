@@ -1,7 +1,7 @@
 # Samples
 ## advertising styles: calm and energetic (700. EPOCH )
 - [Original energetic](https://drive.google.com/open?id=1T6I-IbWuPp5sqcO7Ypy5ljpB1YuJqW0u)
-- [From energetic to calm] (https://drive.google.com/open?id=18pOnm1moQGRf9BWKGjtgp3hGXR09D7Ak)
+- [From energetic to calm](https://drive.google.com/open?id=18pOnm1moQGRf9BWKGjtgp3hGXR09D7Ak)
 
 Originaal rahulik:
 https://drive.google.com/open?id=1VumlFOZ74mddxYELIYW7Lj_kyGxVjXLw
