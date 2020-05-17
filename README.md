@@ -4,28 +4,17 @@
 - [From energetic to calm](https://drive.google.com/open?id=18pOnm1moQGRf9BWKGjtgp3hGXR09D7Ak)
 - [Original calm](https://drive.google.com/open?id=1VumlFOZ74mddxYELIYW7Lj_kyGxVjXLw)
 - [From calm to energetic](https://drive.google.com/open?id=1xfWM_TCvr-pKqm_2jiJts2Z_vfpH2x9V)
-Originaal rahulik:
-https://drive.google.com/open?id=1821AQCPJfhuOlfsazsP0DHRPqTo6QAs1
-Rahulikust energiliseks:
-https://drive.google.com/open?id=1tsjyclXgcoy1KiMORHUgz8zBHtyZ45VI
-SÜNTEESITUD REKLAAM
-võrreldes 100. epohhiga (vt nädal tagasi üles panduid) on häälekvaliteet parem
-Originaal Tõnu HTS:
-https://drive.google.com/open?id=1rsOws_mvI-ey6VA2nP31wiEZDYTr8J2l
-Energiline Tõnu HTS:
-https://drive.google.com/open?id=1ayj01dsSt8hlZKPReuFyTxhilOPvvJO8
-Rahulik Tõnu HTS:
-https://drive.google.com/open?id=1JkwqkGlJ9h6mVoXp3rAVYSz15EtTsaM4
-Originaal 2 Tõnu HTS:
-https://drive.google.com/open?id=1j79Ffh30uqgavK_JPl_b_4tQuzenqcqD
-Energiline 2 Tõnu HTS:
-https://drive.google.com/open?id=1OnEN7EX0A-Q0AggqzNXYUyNITiZhoG24
-Rahulik 2 Tõnu HTS:
-https://drive.google.com/open?id=1q99midd7Mies3wa5qvU9kSP8jIAwcIMb
-Originaal Meelis HTS:
-https://drive.google.com/open?id=18rPXONwxgsJYNJXFmtqCSth2QpHsmhU0
-Energiline Meelis HTS:
-https://drive.google.com/open?id=1Br9-VObcfcKyuT3CifyY4SPsSARH6bH6
+- [original calm](https://drive.google.com/open?id=1821AQCPJfhuOlfsazsP0DHRPqTo6QAs1)
+- [From calm to energetic](https://drive.google.com/open?id=1tsjyclXgcoy1KiMORHUgz8zBHtyZ45VI)
+## SÜNTEESITUD REKLAAM
+- [Original Tõnu HTS](https://drive.google.com/open?id=1rsOws_mvI-ey6VA2nP31wiEZDYTr8J2l)
+- [Energetic Tõnu HTS](https://drive.google.com/open?id=1ayj01dsSt8hlZKPReuFyTxhilOPvvJO8)
+- [Calm Tõnu HTS](https://drive.google.com/open?id=1JkwqkGlJ9h6mVoXp3rAVYSz15EtTsaM4)
+- [Original 2 Tõnu HTS](https://drive.google.com/open?id=1j79Ffh30uqgavK_JPl_b_4tQuzenqcqD)
+- [Energetic 2 Tõnu HTS](https://drive.google.com/open?id=1OnEN7EX0A-Q0AggqzNXYUyNITiZhoG24)
+- [Calm 2 Tõnu HTS](https://drive.google.com/open?id=1q99midd7Mies3wa5qvU9kSP8jIAwcIMb)
+- [Original Meelis HTS](https://drive.google.com/open?id=18PXONwxgsJYNJXFmtqCSth2QpHsmhU0)
+- [Energetic Meelis HTS](https://drive.google.com/open?id=1Br9-VObcfcKyuT3CifyY4SPsSARH6bH6)
 Rahulik Meelis HTS:
 https://drive.google.com/open?id=1gqMR9niZCkLsAETVSCs6cVRpK45NUPxc
 Originaal 2 Meelis HTS:
