@@ -2,11 +2,8 @@
 ## Advertising styles: calm and energetic (700. EPOCH )
 - [Original energetic](https://drive.google.com/open?id=1T6I-IbWuPp5sqcO7Ypy5ljpB1YuJqW0u)
 - [From energetic to calm](https://drive.google.com/open?id=18pOnm1moQGRf9BWKGjtgp3hGXR09D7Ak)
-
-Originaal rahulik:
-https://drive.google.com/open?id=1VumlFOZ74mddxYELIYW7Lj_kyGxVjXLw
-Rahulikust energiliseks:
-https://drive.google.com/open?id=1xfWM_TCvr-pKqm_2jiJts2Z_vfpH2x9V
+- [Original calm](https://drive.google.com/open?id=1VumlFOZ74mddxYELIYW7Lj_kyGxVjXLw)
+- [From calm to energetic](https://drive.google.com/open?id=1xfWM_TCvr-pKqm_2jiJts2Z_vfpH2x9V)
 Originaal rahulik:
 https://drive.google.com/open?id=1821AQCPJfhuOlfsazsP0DHRPqTo6QAs1
 Rahulikust energiliseks:
