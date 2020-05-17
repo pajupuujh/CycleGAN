@@ -4,7 +4,7 @@
 - [From energetic to calm](https://drive.google.com/open?id=18pOnm1moQGRf9BWKGjtgp3hGXR09D7Ak)
 - [Original calm](https://drive.google.com/open?id=1VumlFOZ74mddxYELIYW7Lj_kyGxVjXLw)
 - [From calm to energetic](https://drive.google.com/open?id=1xfWM_TCvr-pKqm_2jiJts2Z_vfpH2x9V)
-- [original calm](https://drive.google.com/open?id=1821AQCPJfhuOlfsazsP0DHRPqTo6QAs1)
+- [Original calm](https://drive.google.com/open?id=1821AQCPJfhuOlfsazsP0DHRPqTo6QAs1)
 - [From calm to energetic](https://drive.google.com/open?id=1tsjyclXgcoy1KiMORHUgz8zBHtyZ45VI)
 ## Synthesized advertisement
 - [Original Tõnu HTS](https://drive.google.com/open?id=1rsOws_mvI-ey6VA2nP31wiEZDYTr8J2l)
