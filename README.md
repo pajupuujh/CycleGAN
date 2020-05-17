@@ -13,7 +13,7 @@
 - [Original 2 Tõnu HTS](https://drive.google.com/open?id=1j79Ffh30uqgavK_JPl_b_4tQuzenqcqD)
 - [Energetic 2 Tõnu HTS](https://drive.google.com/open?id=1OnEN7EX0A-Q0AggqzNXYUyNITiZhoG24)
 - [Calm 2 Tõnu HTS](https://drive.google.com/open?id=1q99midd7Mies3wa5qvU9kSP8jIAwcIMb)
-- [Original Meelis HTS](https://drive.google.com/open?id=18PXONwxgsJYNJXFmtqCSth2QpHsmhU0)
+- [Original Meelis HTS](https://drive.google.com/open?id=15BAQQY7eaO6PYkDTNNPf-IdethEEVBoy)
 - [Energetic Meelis HTS](https://drive.google.com/open?id=1Br9-VObcfcKyuT3CifyY4SPsSARH6bH6)
 Rahulik Meelis HTS:
 https://drive.google.com/open?id=1gqMR9niZCkLsAETVSCs6cVRpK45NUPxc
