@@ -5,8 +5,8 @@
 log/
 model/
 output*
-__*
 voices/
 wavs/
 local/
 .ipynb_checkpoints/
+__pycache__
