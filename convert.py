@@ -2,6 +2,8 @@ import argparse
 import os
 import numpy as np
 
+import soundfile
+
 from model import CycleGAN
 from utils import *
 
@@ -57,7 +59,7 @@ def conversion(model_dir, model_name, data_dir, conversion_direction, output_dir
         decoded_sp_converted = world_decode_spectral_envelop(coded_sp = coded_sp_converted, fs = sampling_rate)
         # decoded_sp_converted = sp
         wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
-        librosa.output.write_wav(os.path.join(output_dir, os.path.basename(file)), wav_transformed, sampling_rate)
+        soundfile.write(os.path.join(output_dir, os.path.basename(file)), wav_transformed, sampling_rate, 'PCM_24')
 
 
 if __name__ == '__main__':

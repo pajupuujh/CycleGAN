@@ -3,6 +3,7 @@ import numpy as np
 import argparse
 import time
 import librosa
+import soundfile
 
 from utils import *
 from model import CycleGAN
@@ -148,7 +149,7 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
                     coded_sp_converted = np.ascontiguousarray(coded_sp_converted)
                     decoded_sp_converted = world_decode_spectral_envelop(coded_sp = coded_sp_converted, fs = sampling_rate)
                     wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
-                    librosa.output.write_wav(os.path.join(validation_A_output_dir, os.path.basename(file)), wav_transformed, sampling_rate)
+                    soundfile.write(os.path.join(validation_A_output_dir, os.path.basename(file)), wav_transformed, sampling_rate)
 
         if validation_B_dir is not None:
             if epoch % 50 == 0:
@@ -168,7 +169,7 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
                     coded_sp_converted = np.ascontiguousarray(coded_sp_converted)
                     decoded_sp_converted = world_decode_spectral_envelop(coded_sp = coded_sp_converted, fs = sampling_rate)
                     wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
-                    librosa.output.write_wav(os.path.join(validation_B_output_dir, os.path.basename(file)), wav_transformed, sampling_rate)
+                    soundfile.write(os.path.join(validation_B_output_dir, os.path.basename(file)), wav_transformed, sampling_rate, 'PCM_24')
 
 if __name__ == '__main__':
 
