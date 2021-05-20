@@ -66,11 +66,11 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description = 'Convert voices using pre-trained EmoCycleGAN model.')
 
-    model_dir_default = './model/a_b'
+    model_dir_default = '../model/a_b'
     model_name_default = 'a_b.ckpt'
-    data_dir_default = './voices'
+    data_dir_default = '../voices'
     conversion_direction_default = 'A2B'
-    output_dir_default = './voices_converted'
+    output_dir_default = '../voices_converted'
 
     parser.add_argument('--model_dir', type = str, help = 'Directory for the pre-trained model.', default = model_dir_default)
     parser.add_argument('--model_name', type = str, help = 'Filename for the pre-trained model.', default = model_name_default)

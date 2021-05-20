@@ -175,16 +175,17 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description = 'Train CycleGAN model for datasets.')
     
-    train_A_dir_default = 'wavs/a'
-    train_B_dir_default = 'wavs/b'
-    validation_A_dir_default = 'valid_a'
-    validation_B_dir_default = 'valid_b'
+    train_A_dir_default = '../wavs/a'
+    train_B_dir_default = '../wavs/b'
+    validation_A_dir_default = '../wavs/valid_a'
+    validation_B_dir_default = '../wavs/valid_b'
 
-    model_dir_default = './model/a_b'
+    model_dir_default = '../model/a_b'
     model_name_default = 'a_b.ckpt'
     random_seed_default = 0
-    output_dir_default = './output'
-    tensorboard_log_dir_default = './log'
+    output_dir_default = '../validation_output'
+    tensorboard_log_dir_default = '../log'
+
 
     parser.add_argument('--train_A_dir', type = str, help = 'Directory for A.', default = train_A_dir_default)
     parser.add_argument('--train_B_dir', type = str, help = 'Directory for B.', default = train_B_dir_default)
