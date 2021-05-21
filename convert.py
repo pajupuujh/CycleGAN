@@ -58,7 +58,8 @@ def conversion(model_dir, model_name, data_dir, conversion_direction, output_dir
         coded_sp_converted = np.ascontiguousarray(coded_sp_converted)
         decoded_sp_converted = world_decode_spectral_envelop(coded_sp = coded_sp_converted, fs = sampling_rate)
         # decoded_sp_converted = sp
-        wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
+        #fixme# wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
+        wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = sp, ap = ap, fs = sampling_rate, frame_period = frame_period)
         soundfile.write(os.path.join(output_dir, os.path.basename(file)), wav_transformed, sampling_rate, 'PCM_24')
 
 

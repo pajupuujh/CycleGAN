@@ -22,12 +22,12 @@ def version_dir(model, output, version):
     validation_B = os.path.join(output_dir, 'converted_B')
     if not os.path.exists(validation_B):
         os.makedirs(validation_B)
-    return (model, output, validation_A, validation_B)
+    return (model_dir, output_dir, validation_A, validation_B)
 
-def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, validation_A_dir, validation_B_dir, output_dir_base, tensorboard_log_dir):
+def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, validation_A_dir, validation_B_dir, output_dir_base, tensorboard_log_dir, epoch_batch_size):
 
     np.random.seed(random_seed)
-
+    
     num_epochs = 5000
     mini_batch_size = 1 # mini_batch_size = 1 is better
     generator_learning_rate = 0.0002
@@ -76,7 +76,7 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
 
     print('Time Elapsed for Data Preprocessing: %02d:%02d:%02d' % (time_elapsed // 3600, (time_elapsed % 3600 // 60), (time_elapsed % 60 // 1)))
 
-    model = CycleGAN(num_features = num_mcep)
+    model = CycleGAN(num_features = num_mcep, log_dir=tensorboard_log_dir)
 
     num_iterations = 0
 
@@ -113,7 +113,13 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
             start = i * mini_batch_size
             end = (i + 1) * mini_batch_size
 
-            generator_loss, discriminator_loss = model.train(input_A = dataset_A[start:end], input_B = dataset_B[start:end], lambda_cycle = lambda_cycle, lambda_identity = lambda_identity, generator_learning_rate = generator_learning_rate, discriminator_learning_rate = discriminator_learning_rate)
+            generator_loss, discriminator_loss = model.train(
+                input_A = dataset_A[start:end],
+                input_B = dataset_B[start:end],
+                lambda_cycle = lambda_cycle,
+                lambda_identity = lambda_identity,
+                generator_learning_rate = generator_learning_rate,
+                discriminator_learning_rate = discriminator_learning_rate)
 
             if i % 50 == 0:
                 print('Iteration: {:07d}, Generator Learning Rate: {:.7f}, Discriminator Learning Rate: {:.7f}, Generator Loss : {:.3f}, Discriminator Loss : {:.3f}'.format(num_iterations, generator_learning_rate, discriminator_learning_rate, generator_loss, discriminator_loss))
@@ -123,7 +129,7 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
 
         print('Time Elapsed for This Epoch: %02d:%02d:%02d' % (time_elapsed_epoch // 3600, (time_elapsed_epoch % 3600 // 60), (time_elapsed_epoch % 60 // 1)))
 
-        if (generator_learning_rate <= 0) or (epoch % 50 == 0):
+        if (generator_learning_rate <= 0) or (epoch % epoch_batch_size == 0):
             model_dir, output_dir, validation_A_output_dir, validation_B_output_dir = version_dir(model_dir_base, output_dir_base, epoch)
             model.save(directory = model_dir, filename = model_name)
 
@@ -132,7 +138,7 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
             break
 
         if validation_A_dir is not None:
-            if epoch % 50 == 0:
+            if epoch % epoch_batch_size == 0:
                 print('Generating Validation Data B from A...')
                 for file in os.listdir(validation_A_dir):
                     filepath = os.path.join(validation_A_dir, file)
@@ -152,7 +158,7 @@ def train(train_A_dir, train_B_dir, model_dir_base, model_name, random_seed, val
                     soundfile.write(os.path.join(validation_A_output_dir, os.path.basename(file)), wav_transformed, sampling_rate)
 
         if validation_B_dir is not None:
-            if epoch % 50 == 0:
+            if epoch % epoch_batch_size == 0:
                 print('Generating Validation Data A from B...')
                 for file in os.listdir(validation_B_dir):
                     filepath = os.path.join(validation_B_dir, file)
@@ -185,6 +191,7 @@ if __name__ == '__main__':
     random_seed_default = 0
     output_dir_default = '../validation_output'
     tensorboard_log_dir_default = '../log'
+    epoch_batch_size_default = 30
 
 
     parser.add_argument('--train_A_dir', type = str, help = 'Directory for A.', default = train_A_dir_default)
@@ -196,6 +203,7 @@ if __name__ == '__main__':
     parser.add_argument('--validation_B_dir', type = str, help = 'Convert validation B after each training epoch.', default = validation_B_dir_default)
     parser.add_argument('--output_dir', type = str, help = 'Output directory for converted validation voices.', default = output_dir_default)
     parser.add_argument('--tensorboard_log_dir', type = str, help = 'TensorBoard log directory.', default = tensorboard_log_dir_default)
+    parser.add_argument('--epoch_batch_size', type = str, help = 'Validation wav generation step.', default = epoch_batch_size_default)
 
     argv = parser.parse_args()
 
@@ -208,6 +216,16 @@ if __name__ == '__main__':
     validation_B_dir = None if argv.validation_B_dir == 'None' or argv.validation_B_dir == 'none' else argv.validation_B_dir
     output_dir_base = argv.output_dir
     tensorboard_log_dir = argv.tensorboard_log_dir
+    epoch_batch_size = argv.epoch_batch_size
 
-    train(train_A_dir = train_A_dir, train_B_dir = train_B_dir, model_dir_base = model_dir_base, model_name = model_name, random_seed = random_seed, validation_A_dir = validation_A_dir, validation_B_dir = validation_B_dir, output_dir_base = output_dir_base, tensorboard_log_dir = tensorboard_log_dir)
+    train(train_A_dir=train_A_dir,
+          train_B_dir=train_B_dir,
+          model_dir_base=model_dir_base,
+          model_name=model_name,
+          random_seed=random_seed,
+          validation_A_dir=validation_A_dir,
+          validation_B_dir=validation_B_dir,
+          output_dir_base=output_dir_base,
+          tensorboard_log_dir=tensorboard_log_dir,
+          epoch_batch_size=epoch_batch_size)
     ###
