@@ -49,6 +49,6 @@ red - audiobook")
 
 [Tensorboard: angry/happy and sad/happy](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/happy.png)
 
-[Happy -> Angry wav](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/2_Head%20hinnad%20annavad%20elule%20parema%20motte.wav)
+[Happy -> Angry mp3](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/2_Head%20hinnad%20annavad%20elule%20parema%20motte.mp3)
 
 
