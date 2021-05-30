@@ -42,3 +42,7 @@
 ![tensorboard](tensorboard.png "blue - advertisments
 red - audiobook")
 
+## Try
+[Tensorboard for angry to happy](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/angry.png)
+
+
