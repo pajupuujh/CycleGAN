@@ -7,12 +7,12 @@ import soundfile
 from model import CycleGAN
 from utils import *
 
-def conversion(model_dir, model_name, data_dir, conversion_direction, output_dir):
+def conversion(model_dir, model_name, data_dir, conversion_direction, output_dir, f0only):
 
     num_features = 24
     sampling_rate = 16000
     frame_period = 5.0
-
+    
     model = CycleGAN(num_features = num_features, mode = 'test')
 
     model.load(filepath = os.path.join(model_dir, model_name))
@@ -44,28 +44,32 @@ def conversion(model_dir, model_name, data_dir, conversion_direction, output_dir
         if conversion_direction == 'A2B':
             f0_converted = pitch_conversion(f0 = f0, mean_log_src = logf0s_mean_A, std_log_src = logf0s_std_A, mean_log_target = logf0s_mean_B, std_log_target = logf0s_std_B)
             #f0_converted = f0
-            coded_sp_norm = (coded_sp_transposed - mcep_mean_A) / mcep_std_A
-            coded_sp_converted_norm = model.test(inputs = np.array([coded_sp_norm]), direction = conversion_direction)[0]
-            coded_sp_converted = coded_sp_converted_norm * mcep_std_B + mcep_mean_B
+            if f0only == "F":
+                coded_sp_norm = (coded_sp_transposed - mcep_mean_A) / mcep_std_A
+                coded_sp_converted_norm = model.test(inputs = np.array([coded_sp_norm]), direction = conversion_direction)[0]
+                coded_sp_converted = coded_sp_converted_norm * mcep_std_B + mcep_mean_B
         else:
             f0_converted = pitch_conversion(f0 = f0, mean_log_src = logf0s_mean_B, std_log_src = logf0s_std_B, mean_log_target = logf0s_mean_A, std_log_target = logf0s_std_A)
             #f0_converted = f0
-            coded_sp_norm = (coded_sp_transposed - mcep_mean_B) / mcep_std_B
-            coded_sp_converted_norm = model.test(inputs = np.array([coded_sp_norm]), direction = conversion_direction)[0]
-            coded_sp_converted = coded_sp_converted_norm * mcep_std_A + mcep_mean_A
+            if f0only == "F":
+                coded_sp_norm = (coded_sp_transposed - mcep_mean_B) / mcep_std_B
+                coded_sp_converted_norm = model.test(inputs = np.array([coded_sp_norm]), direction = conversion_direction)[0]
+                coded_sp_converted = coded_sp_converted_norm * mcep_std_A + mcep_mean_A
 
-        coded_sp_converted = coded_sp_converted.T
-        coded_sp_converted = np.ascontiguousarray(coded_sp_converted)
-        decoded_sp_converted = world_decode_spectral_envelop(coded_sp = coded_sp_converted, fs = sampling_rate)
-        # decoded_sp_converted = sp
-        #fixme# wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
-        wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = sp, ap = ap, fs = sampling_rate, frame_period = frame_period)
+        if f0only == "F":
+            coded_sp_converted = coded_sp_converted.T
+            coded_sp_converted = np.ascontiguousarray(coded_sp_converted)
+            decoded_sp_converted = world_decode_spectral_envelop(coded_sp = coded_sp_converted, fs = sampling_rate)
+            wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = decoded_sp_converted, ap = ap, fs = sampling_rate, frame_period = frame_period)
+        else:
+            print("f0 only mod "+file)
+            wav_transformed = world_speech_synthesis(f0 = f0_converted, decoded_sp = sp, ap = ap, fs = sampling_rate, frame_period = frame_period)
+
         soundfile.write(os.path.join(output_dir, os.path.basename(file)), wav_transformed, sampling_rate, 'PCM_24')
 
 
 if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser(description = 'Convert voices using pre-trained EmoCycleGAN model.')
+    parser = argparse.ArgumentParser(description='Convert voices using pre-trained EmoCycleGAN model.')
 
     model_dir_default = '../model/a_b'
     model_name_default = 'a_b.ckpt'
@@ -73,11 +77,12 @@ if __name__ == '__main__':
     conversion_direction_default = 'A2B'
     output_dir_default = '../voices_converted'
 
-    parser.add_argument('--model_dir', type = str, help = 'Directory for the pre-trained model.', default = model_dir_default)
-    parser.add_argument('--model_name', type = str, help = 'Filename for the pre-trained model.', default = model_name_default)
-    parser.add_argument('--data_dir', type = str, help = 'Directory for the voices for conversion.', default = data_dir_default)
-    parser.add_argument('--conversion_direction', type = str, help = 'Conversion direction for CycleGAN. A2B or B2A. The first object in the model file name is A, and the second object in the model file name is B.', default = conversion_direction_default)
-    parser.add_argument('--output_dir', type = str, help = 'Directory for the converted voices.', default = output_dir_default)
+    parser.add_argument('--model_dir', type=str, help='Directory for the pre-trained model.', default=model_dir_default)
+    parser.add_argument('--model_name', type=str, help='Filename for the pre-trained model.', default=model_name_default)
+    parser.add_argument('--data_dir', type=str, help='Directory for the voices for conversion.', default=data_dir_default)
+    parser.add_argument('--conversion_direction', type=str, help='Conversion direction for CycleGAN. A2B or B2A. The first object in the model file name is A, and the second object in the model file name is B.', default=conversion_direction_default)
+    parser.add_argument('--output_dir', type=str, help='Directory for the converted voices.', default=output_dir_default)
+    parser.add_argument('--f0only', type=str, help='f0 only.', default="F")
 
     argv = parser.parse_args()
 
@@ -87,6 +92,9 @@ if __name__ == '__main__':
     conversion_direction = argv.conversion_direction
     output_dir = argv.output_dir
 
-    conversion(model_dir = model_dir, model_name = model_name, data_dir = data_dir, conversion_direction = conversion_direction, output_dir = output_dir)
-
-
+    conversion(model_dir=model_dir,
+               model_name=model_name,
+               data_dir=data_dir,
+               conversion_direction=conversion_direction,
+               output_dir=output_dir,
+               f0only=argv.f0only)

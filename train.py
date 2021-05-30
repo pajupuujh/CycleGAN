@@ -193,7 +193,6 @@ if __name__ == '__main__':
     tensorboard_log_dir_default = '../log'
     epoch_batch_size_default = 30
 
-
     parser.add_argument('--train_A_dir', type = str, help = 'Directory for A.', default = train_A_dir_default)
     parser.add_argument('--train_B_dir', type = str, help = 'Directory for B.', default = train_B_dir_default)
     parser.add_argument('--model_dir', type = str, help = 'Directory for saving models.', default = model_dir_default)
@@ -216,7 +215,7 @@ if __name__ == '__main__':
     validation_B_dir = None if argv.validation_B_dir == 'None' or argv.validation_B_dir == 'none' else argv.validation_B_dir
     output_dir_base = argv.output_dir
     tensorboard_log_dir = argv.tensorboard_log_dir
-    epoch_batch_size = argv.epoch_batch_size
+    epoch_batch_size = int(argv.epoch_batch_size)
 
     train(train_A_dir=train_A_dir,
           train_B_dir=train_B_dir,
