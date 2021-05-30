@@ -43,6 +43,10 @@
 red - audiobook")
 
 ## Try
-[Tensorboard for angry to happy](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/angry.png)
+[Tensorboard: calm/active](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/calm-active.png)
+
+[Tensorboard: spontaneous/prepared](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/spontaneous.png)
+
+[Tensorboard: angry/happy and sad/happy](https://raw.githubusercontent.com/pajupuujh/demo_resources/main/2021-05/happy.png)
 
 
