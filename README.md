@@ -4,7 +4,7 @@
 ## Training data
 
 ### Advertising styles: calm and energetic
-Multi-speaker Estonian advertising corpus (94 female voices): 
+- Multi-speaker Estonian advertising corpus (94 female voices): 
 one advertisement text read by 94 voices both in a calm and in an energetic style.
 #### Samples
 Original_Head hinnad
